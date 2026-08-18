@@ -1,19 +1,27 @@
-import React, {useRef, useState} from 'react'
+import { useRef, useState } from 'react'
 
 function LatihanUseRef() {
-    const [Name, setName] = useState('');
-    const inputRef = useRef(null);
-    function focusInput() {
-        inputRef.current.focus();
-    }
+  const [inputValue, setInputValue] = useState('John')
+  const [displayName, setDisplayName] = useState('John')
+  const inputRef = useRef(null)
+
+  const focusInput = () => {
+    inputRef.current?.focus()
+  }
+
+  const showName = () => {
+    setDisplayName(inputValue)
+  }
+
   return (
     <div>
       <input
         ref={inputRef}
-        value={Name}
-        onChange={(e) => setName(e.target.value)}
+        value={inputValue}
+        onChange={(event) => setInputValue(event.target.value)}
       />
-      <button onClick={focusInput}>Focus Input</button>
+      <button onClick={showName}>Show Name</button>
+      <h2>Current Input: {displayName}</h2>
     </div>
   )
 }
