@@ -20,7 +20,7 @@ function LatihanUseRef() {
         value={inputValue}
         onChange={(event) => setInputValue(event.target.value)}
       />
-      <br></br>
+      <br> </br>
       <button onClick={showName}>Show Name</button>
       <h2>Current Input: {displayName}</h2>
     </div>
