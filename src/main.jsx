@@ -7,7 +7,6 @@ import LatihanControlComponent from './LatihanControlComponent.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <LatihanUseRef />
     <LatihanControlComponent />
   </StrictMode>
 )
