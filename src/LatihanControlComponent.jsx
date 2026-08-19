@@ -5,7 +5,7 @@ function LatihanControlComponent() {
     const [password, setPassword] = useState("");
     const handlerSubmit = (event) => {
       event.preventDefault();
-      console.log(event.target.elements.Username.value);
+      console.log(event.target.elements.username.value);
       console.log(event.target.elements.password.value);
     }
   return (
